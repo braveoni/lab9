@@ -28,6 +28,7 @@ jobs:
         pip list
     - name: Use pylint
       run: |
+        source .env/bin/activate
         pylint `ls -R|grep .py$|xargs`
     - name: Testing
       run: |
