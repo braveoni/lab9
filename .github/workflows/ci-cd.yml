@@ -45,6 +45,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
+          mkdir ~/dev/
           cd ${{ secrets.DEV}}
           git pull origin master
           source .env/bin/activate
@@ -61,6 +62,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
+          mkdir ~/prod/
           cd ${{ secrets.PROD}}
           git pull origin master
           source .env/bin/activate
