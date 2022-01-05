@@ -29,7 +29,7 @@ jobs:
     - name: Use pylint
       run: |
         source .env/bin/activate
-        find . -type f -name "*.py" | xargs pylint 
+        find . -maxdepth 2 -type f -name "*.py" | xargs pylint 
     - name: Testing
       run: |
         source .env/bin/activate
