@@ -1,0 +1,6 @@
+github:
+  request_timeout: 10
+search:
+  default_query: "lab9"
+  default_limit: 10
+env: 'dev'

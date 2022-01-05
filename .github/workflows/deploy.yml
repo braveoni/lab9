@@ -1,4 +1,4 @@
-name: cicd
+name: CI/CD
 
 on:
   push:
@@ -45,7 +45,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
-          mkdir ~/dev/
           cd ${{ secrets.DEV}}
           git pull origin main
           source .env/bin/activate
@@ -62,7 +61,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
-          mkdir ~/prod/
           cd ${{ secrets.PROD}}
           git pull origin main
           source .env/bin/activate
