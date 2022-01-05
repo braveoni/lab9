@@ -27,7 +27,6 @@ jobs:
         pip list
     - name: Use pylint
       run: |
-        source .env/bin/activate
         find . -type f -name "*.py" | xargs pylint 
     - name: Testing
       run: |
@@ -61,7 +60,7 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         
         script: |
-          cd ${{ secrets.PROD}}
+          cd ${{ secrets.PROD }}
           git pull origin main
           source .env/bin/activate
           pip install -r requirements.txt
